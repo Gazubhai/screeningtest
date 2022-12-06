@@ -11897,9 +11897,10 @@ header:before {
 }
 @media (max-width: 768px){
   header.masthead .masthead-heading{
-    font-size: 1.5rem;
-    width: 100% !important;
-        line-height: 2rem;
+font-size: 2rem;
+  width: 100% !important;
+  line-height: 2.5rem;
+  padding: 0 !important;
   }
     .circlemaster{
       display: none;
@@ -11911,8 +11912,9 @@ header:before {
     }
     .masthead{
       padding: 14rem 0 !important;
-          background-size: 180% !important;
+          background-size: 245% !important;
             background-position: center !important;
+            min-height: 100vh;
     }
         .masthead-heading label{
           display: none;
@@ -11941,7 +11943,7 @@ header:before {
   display: none;
 }
 .footer{
-  bottom: 185px;
+  bottom: 0px;
 }
 .footer img{
   height: 20px;
