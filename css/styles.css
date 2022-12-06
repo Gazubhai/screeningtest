@@ -11341,7 +11341,7 @@ p {
 #mainNav {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  background-color: #212529;
+  background-color: transparent;
 }
 #mainNav .navbar-toggler {
   padding: 0.75rem;
@@ -11418,6 +11418,7 @@ position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
+  top:0;
 
 }
 header.masthead {
@@ -11459,16 +11460,16 @@ header.masthead .masthead-heading {
 }
 .lets-connect-mail{
   position: absolute;
-  bottom: 150px;
+  bottom: 180px;
   left: -40px;
-  transform: rotate(90deg);
+  transform: rotate(90deg) !important;
   font-family: 'Kanit';
 }
 .lets-connect{
       position: absolute;
-      bottom: 150px;
+      bottom: 180px;
       right: -40px;
-      transform: rotate(90deg);
+      transform: rotate(90deg) !important;
       font-family: 'Kanit';
 }
 .lets-connect img , .lets-connect-mail img{
@@ -11488,7 +11489,7 @@ header.masthead .masthead-heading {
  }
 .masthead-heading a {
 position: absolute;
-  bottom: -100px;
+  bottom: -70px;
   right: 0;
   font-size: 12px;
   font-weight: 100;
@@ -11497,6 +11498,9 @@ position: absolute;
   letter-spacing: 1px;
   opacity: 0.5;
   text-decoration: none;
+  border-bottom: 1px solid #be9cff;
+  padding-bottom: 5px;
+  line-height: 10px;
 }
 .masthead-heading a:hover{
   opacity: 1;
@@ -11506,8 +11510,8 @@ position: absolute;
 }
 @media (min-width: 768px) {
   header.masthead {
-padding-top: 16rem;
-  padding-bottom: 16.5rem;
+padding-top: 15rem;
+  padding-bottom: 15.5rem;
   }
   header.masthead .masthead-subheading {
     font-size: 2.25rem;
@@ -11889,4 +11893,56 @@ header:before {
   left: -90px;
   filter: blur(150px);
   opacity: 0.2;
+}
+@media (max-width: 768px){
+  header.masthead .masthead-heading{
+    font-size: 1.5rem;
+    width: 100% !important;
+        line-height: 2rem;
+  }
+    .circlemaster{
+      display: none;
+    }
+    .header.masthead{
+      background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+    }
+    .masthead{
+      padding: 14rem 0 !important;
+          background-size: 180% !important;
+            background-position: center !important;
+    }
+        .masthead-heading label{
+          display: none;
+        }
+        .masthead-heading a {
+    position: relative;
+    bottom: -100px;
+    right: 0;
+    font-size: 12px;
+    font-weight: 100;
+    font-family: Kanit;
+    color: #be9cff;
+    letter-spacing: 1px;
+    opacity: 0.5;
+    text-decoration: none;
+    background: #21164a6e;
+    padding: 5px 5px;
+    font-weight: 400;
+    border-radius: 0;
+    border-bottom: 2px solid #be9cff;
+}
+.navbar-brand{
+  font-size: 1rem;
+}
+.footer span{
+  display: none;
+}
+.footer{
+  bottom: 185px;
+}
+.footer img{
+  height: 20px;
+}
 }

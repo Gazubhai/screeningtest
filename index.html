@@ -16,6 +16,7 @@
       crossorigin="anonymous"
     ></script>
     <!-- Google fonts-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Zen+Dots:400,700, 900"
       rel="stylesheet"
@@ -71,27 +72,57 @@
       </div>
     </nav>
     <!-- Masthead-->
-    <div class="circlemaster text-center">
+    <div
+      class="circlemaster text-center"
+      data-aos="zoom-in"
+      data-aos-delay="200"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+    >
       <img id="circlemaster" src="./img/circle.svg" />
     </div>
-    <header class="masthead mt-4">
+    <header class="masthead">
       <div class="container">
         <div class="masthead-heading w-75 px-5 m-auto">
-          <label>UI/UX Designer</label>
-          Creating seamless
-          <span style="color: #be9cff; text-decoration: underline">web</span>
-          and
-          <span style="color: #be9cff; text-decoration: underline"
-            >mobile applications</span
+          <label
+            data-aos="fade-right"
+            data-aos-delay="500"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            >UI/UX Designer</label
           >
-          for past 10 years
-          <a href=""
+          <div
+            data-aos="fade-left"
+            data-aos-delay="1500"
+            data-aos-duration="2000"
+            data-aos-easing="ease-in-out"
+          >
+            Creating seamless
+            <span style="color: #be9cff; text-decoration: underline">web</span>
+            and
+            <span style="color: #be9cff; text-decoration: underline"
+              >mobile applications</span
+            >
+            for past 10 years
+          </div>
+          <a
+            href=""
+            data-aos="fade-right"
+            data-aos-delay="2000"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
             ><i class="lnr lnr-pointer-right mr-4 color-warning"></i>Download
             Resume</a
           >
         </div>
       </div>
-      <div class="lets-connect">
+      <div
+        class="lets-connect"
+        data-aos="fade-down"
+        data-aos-delay="3000"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+      >
         <span>Lets connect</span
         ><a
           href="https://www.linkedin.com/in/manoj-adhikari-4169ab76/"
@@ -101,7 +132,13 @@
           ><img src="./img/behance.svg" height="20"
         /></a>
       </div>
-      <div class="lets-connect-mail">
+      <div
+        class="lets-connect-mail"
+        data-aos="fade-down"
+        data-aos-delay="3000"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+      >
         <span>Send me an email</span
         ><a href="mailto:adhikarimanoj16@gmail.com"
           ><img src="./img/mail.svg" height="20"
@@ -191,6 +228,10 @@
       </div>
     </footer>
   </body>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script>
     var circle = document.getElementById('circlemaster');
 
