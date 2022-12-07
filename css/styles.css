@@ -11406,10 +11406,22 @@ p {
   }
 }
 #circlemaster{
-height: 1050px;
-    
-    transition-timing-function: linear;
-      transition-duration: 0.3s;
+  height: 1050px;
+-webkit-transition: all 03s ease-in-out;
+  -moz-transition: all 03s ease-in-out;
+  -o-transition: all 03s ease-in-out;
+  transition: all 03s ease-in-out;
+  filter: blur(0px);
+  animation: rotation 200s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
 }
 .circlemaster{
 position: fixed;
@@ -11895,6 +11907,7 @@ header:before {
   filter: blur(150px);
   opacity: 0.2;
 }
+
 @media (max-width: 768px){
   header.masthead .masthead-heading{
 font-size: 2rem;

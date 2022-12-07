@@ -61,7 +61,11 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href=""
+              <a
+                class="nav-link btn-demo"
+                href=""
+                data-toggle="modal"
+                data-target="#myModal2"
                 ><img
                   src="./img/menu.svg"
                   style="filter: invert(1); height: 30px"
@@ -71,14 +75,50 @@
         </div>
       </div>
     </nav>
-    <!-- Masthead-->
+    <!-- Modal -->
     <div
-      class="circlemaster text-center"
-      data-aos="zoom-in"
-      data-aos-delay="200"
-      data-aos-duration="1000"
-      data-aos-easing="ease-in-out"
+      class="modal right fade"
+      id="myModal2"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myModalLabel2"
     >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="myModalLabel2">Right Sidebar</h4>
+          </div>
+
+          <div class="modal-body">
+            <p>
+              Anim pariatur cliche reprehenderit, enim eiusmod high life
+              accusamus terry richardson ad squid. 3 wolf moon officia aute, non
+              cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+              laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+              on it squid single-origin coffee nulla assumenda shoreditch et.
+              Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+              nesciunt sapiente ea proident. Ad vegan excepteur butcher vice
+              lomo. Leggings occaecat craft beer farm-to-table, raw denim
+              aesthetic synth nesciunt you probably haven't heard of them
+              accusamus labore sustainable VHS.
+            </p>
+          </div>
+        </div>
+        <!-- modal-content -->
+      </div>
+      <!-- modal-dialog -->
+    </div>
+    <!-- modal -->
+    <!-- Masthead-->
+    <div class="circlemaster text-center">
       <img id="circlemaster" src="./img/circle.svg" />
     </div>
     <header class="masthead">
@@ -228,6 +268,15 @@
         </div>
       </div>
     </footer>
+    <iframe
+      src="./img/background-sound.mp3"
+      allow="autoplay"
+      autoplay="true"
+      loop="true"
+      style="display: none"
+      id="iframeAudio"
+    >
+    </iframe>
   </body>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
@@ -237,13 +286,13 @@
     var circle = document.getElementById('circlemaster');
 
     document.addEventListener('mousemove', (event) => {
-      var circleX = circle.offsetLeft + circle.offsetWidth / 4;
-      var circleY = circle.offsetTop + circle.offsetHeight / 4;
+      var circleX = circle.offsetLeft + circle.offsetWidth / 2;
+      var circleY = circle.offsetTop + circle.offsetHeight / 2;
       var dX = circleX - event.clientX;
       var dY = circleY - event.clientY;
       var degree = (Math.atan(-dX / dY) * 180) / Math.PI;
       if (dY > 0) {
-        degree += 180;
+        degree += 90;
       }
       circle.style.transform = 'rotate(' + degree + 'deg)';
     });
