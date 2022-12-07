@@ -11915,8 +11915,8 @@ font-size: 2rem;
   line-height: 2.5rem;
   padding: 0 !important;
   }
-    .circlemaster{
-      display: none;
+    .circlemaster img{
+      height: 570px !important;
     }
     .header.masthead{
       background-size: cover;
