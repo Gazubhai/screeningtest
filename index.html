@@ -25,25 +25,26 @@
         --gray: #c8c8c8;
         --light-success: #f4fbf9;
         --light: #9f9f9f;
+        --lighter: #666666;
       }
 
       body {
         font-family: 'Metropolis', sans-serif;
         font-weight: 500;
         background-color: var(--white);
-        font-size: 14px;
+        font-size: 0.85rem;
         height: 100%;
         min-height: 100vh;
         display: flex;
       }
       .main {
-        width: 340px;
+        width: 350px;
         margin: auto;
       }
       @media (max-width: 900px) {
         body {
           min-height: auto;
-          margin: 120px auto;
+          margin: 50px auto;
         }
         .main {
           width: 90%;
@@ -53,6 +54,8 @@
       .main .cart-heading {
         text-align: center;
         position: relative;
+        margin-bottom: 30px;
+        display: block;
       }
       .main .cart-heading::before {
         height: 1px;
@@ -74,11 +77,14 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 15px;
-        border: 1px solid var(--gray);
+        padding: 20px 15px;
+        border: 2px solid var(--gray);
         border-radius: 4px;
-        margin: 20px 0;
-        transition: 0.3s ease-in-out;
+        margin: 15px 0;
+        cursor: pointer;
+      }
+      .main .item:nth-last-child(1) {
+        margin-bottom: 0 !important;
       }
       .main .item .item-check label {
         display: flex;
@@ -87,13 +93,16 @@
         margin-left: 10px;
       }
       .main .item .item-check label span {
-        font-weight: 400;
+        font-weight: 500;
+        margin-bottom: 5px;
+        font-size: 80%;
+        color: var(--lighter);
       }
       .main .item .item-check {
         display: flex;
       }
       .main .item.success {
-        border: 1px solid var(--success);
+        border: 2px solid var(--success);
         background-color: var(--light-success);
         display: flex;
         flex-direction: column;
@@ -103,7 +112,7 @@
       .main .item.success table {
         padding-top: 7px;
         font-size: 11px;
-        font-family: 'Inter' sans-serif;
+        font-family: 'Inter', sans-serif;
       }
       .main .item.success table th {
         font-size: 10px;
@@ -114,11 +123,14 @@
         padding: 2px;
         text-align: left;
         width: 22px;
+        color: var(--lighter);
       }
       .main .item.success table select {
         width: 70px;
         font-size: 11px;
-        height: 20px;
+        height: 25px;
+        border: 1px solid var(--gray);
+        border-radius: 4px;
       }
       .main .item.success .popular-parent {
         display: flex;
@@ -146,9 +158,10 @@
       .main .item.success .item-discount {
         font-size: 12px;
         text-transform: capitalize;
+        font-weight: 600;
       }
       .main .item .item-discount {
-        text-transform: uppercase;
+        text-transform: capitalize;
       }
       .main .item .discount-sm {
         font-size: 10px;
@@ -438,8 +451,18 @@
   </body>
   <script>
     function init() {
-      const radioButtons = document.querySelectorAll('.pair-radio');
+      const radioButtons = document.querySelectorAll('.item');
       const items = document.querySelectorAll('.item');
+
+      items.forEach((item) => {
+        item.addEventListener('click', function () {
+          const radio = item.querySelector('input[type="radio"]');
+
+          if (radio && radio.type === 'radio') {
+            radio.checked = true;
+          }
+        });
+      });
       radioButtons.forEach((radioButton) => {
         radioButton.addEventListener('click', function () {
           items.forEach((item) => {
